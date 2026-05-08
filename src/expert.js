@@ -1,0 +1,48 @@
+// expertsData.js
+export const expertsData = [
+  {
+    id: 1,
+    name: "Александр Иванов",
+    role: "Городские сервисы",
+    description: "Эксперт по цифровой трансформации",
+    photo: "./exp1.png",
+    buttonText: "Вебинар",
+    footerText: "Цифровые решения для города и жителей",
+  },
+  {
+    id: 2,
+    name: "Екатерина Смирнова",
+    role: "Умный транспорт",
+    description: "Руководитель проектов IoT",
+    photo: "./exp2.png",
+    buttonText: "Лекция",
+    footerText: "Интеграция транспорта в цифровую среду",
+  },
+  {
+    id: 3,
+    name: "Дмитрий Козлов",
+    role: "Экология",
+    description: "Специалист по экомониторингу",
+    photo: "./exp3.png",
+    buttonText: "Мастер-класс",
+    footerText: "Чистый город: цифровые решения для экологии",
+  },
+  {
+    id: 4,
+    name: "Ольга Морозова",
+    role: "Цифровое здравоохранение",
+    description: "Ведущий аналитик",
+    photo: "./exp4.png",
+    buttonText: "Семинар",
+    footerText: "Телемедицина и умные клиники",
+  },
+  {
+    id: 5,
+    name: "Павел Новиков",
+    role: "Образование",
+    description: "Эксперт по EdTech",
+    photo: "./exp5.png",
+    buttonText: "Конференция",
+    footerText: "Цифровая трансформация образования",
+  },
+];

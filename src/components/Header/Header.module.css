@@ -1,0 +1,47 @@
+/* src/components/Header/Header.module.css */
+.container__header {
+  width: 100%; /* ← добавьте ширину */
+  background-color: var(--bg-color-violette); /* ← для наглядности */
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  padding: 20px;
+}
+.logo__container {
+  display: flex;
+  gap: 32px;
+}
+.logo1,
+.logo {
+  height: 46px;
+}
+.logo {
+  border-left: 1.5px solid #ffffff33;
+  padding-left: 10px;
+}
+.nav {
+  display: flex;
+  gap: 20px;
+}
+.nav_color {
+  color: #c1c2c7;
+  line-height: 100%;
+  text-decoration: none;
+}
+.questionBtn {
+  border: 1px solid #a486e3;
+  border-radius: 100px;
+  padding: 14px 26px;
+  background-color: var(--bg-color-violette);
+  font-size: 18px;
+  font-weight: 500;
+  color: #a486e3;
+  font-weight: 500;
+}
+.questionBtn:hover {
+  background-color: #a486e3;
+  color: #ffffff;
+}
