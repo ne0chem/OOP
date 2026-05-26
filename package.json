@@ -2,6 +2,7 @@
   "name": "oop-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://ne0chem.github.io/oop-app",
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.9.1",
