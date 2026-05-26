@@ -1,5 +1,6 @@
 import styles from "./Vebinars.module.css";
 import { button } from "../../expert.js";
+import { card } from "../../expert.js";
 
 export default function Vabinars() {
   return (
@@ -64,6 +65,44 @@ export default function Vabinars() {
               <div className={styles.effect__card}></div>
             </div>
           </div>
+        </div>
+        <div className={styles.vebinars__footer}>
+          <p className={styles.vebinars__footer__text}>Личная эффективность</p>
+        </div>
+        <div className={styles.cards__grid}>
+          {card.map((item) => (
+            <div key={item.id} className={styles.card}>
+              <div
+                className={styles.card__image}
+                style={{
+                  backgroundImage: `url(${item.img || "/placeholder.jpg"})`,
+                }}
+              >
+                {/* Кнопка Play - отдельно от overlay */}
+                <button className={styles.play__button}>
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 3L19 12L5 21V3Z"
+                      fill="white"
+                      stroke="white"
+                      strokeWidth="1.5"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </button>
+
+                <div className={styles.card__overlay}>
+                  <p className={styles.card__title}>{item.title}</p>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>

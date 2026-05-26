@@ -6,7 +6,15 @@
 
   --button-heder-border: #a486e3;
   --bg-radios-buttom: 100px;
+
+  --font-display: "Alter Aves", sans-serif;
+  --font-body: "GT Walsheim Pro", Arial, sans-serif;
 }
+html,
+body {
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
   padding: 0;

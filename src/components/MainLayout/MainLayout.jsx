@@ -2,15 +2,18 @@
 import { Outlet } from "react-router-dom";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
+import styles from "./MainLayout.module.css";
 
 export default function MainLayout() {
   return (
-    <div className="layout">
-      <Header />
-      <main>
-        <Outlet />
+    <div className={styles.layout}>
+      <main className={styles.layout__main}>
+        <Header />
+        <div className={styles.layout__content}>
+          <Outlet />
+        </div>
       </main>
-      <Footer /> {/* ← уберите <footer> тег, он уже внутри Footer компонента */}
+      <Footer />
     </div>
   );
 }

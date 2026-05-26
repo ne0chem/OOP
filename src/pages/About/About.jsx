@@ -8,6 +8,12 @@ export default function About() {
         <div className={styles.cool__container_new}>
           <div className="container">
             <div className={styles.cool__content}>
+              <img
+                className={styles.cool__vector_right}
+                src="/Vector.svg"
+                alt=""
+                aria-hidden="true"
+              />
               <div className={styles.cool__content__top}>
                 <div className={styles.cool__left__top}>
                   <p className={styles.text__title}>ОТКРЫТОЕ</p>
@@ -70,24 +76,24 @@ export default function About() {
               <div className={styles.top_dop}>
                 <div className={styles.about__top_left}>
                   <div className={styles.about__imgLT}>
-                    {/* <img
-                    className={styles.about__imgL1}
-                    src="./micro1.png"
-                    alt=""
-                  />
-                  <img
-                    className={styles.about__imgL2}
-                    src="./icon.svg"
-                    alt=""
-                  /> */}
+                    <img
+                      className={styles.about__imgL2}
+                      src="/icon.svg"
+                      alt=""
+                    />
+                    <img
+                      className={styles.about__imgL1}
+                      src="/micro2.png"
+                      alt=""
+                    />
                   </div>
                   <div>
                     <p className={styles.about__textLT}>
-                      В 2020 году, когда мир ушёл в самоизоляцию, мы заметили,
-                      как многим из нас стало не хватать живого общения,
-                      экспертного мнения и возможности перенимать опыт и учиться
-                      у профессионалов. А множество онлайн курсов имели закрытый
-                      или платный доступ.
+                      В 2020 году, когда мир ушёл в самоизоляцию, мы заметили,
+                      как многим из нас стало не хватать живого общения,
+                      экспертного мнения и возможности перенимать опыт и учиться
+                      у профессионалов. А множество онлайн курсов имели закрытый
+                      или платный доступ.
                     </p>
                   </div>
                 </div>
@@ -101,7 +107,39 @@ export default function About() {
                       </p>
                     </div>
                     <div className={styles.about__top_RR}>
-                      <div className={styles.about__top_IMG}></div>
+                      <div className={styles.about__top_IMG}>
+                        <div
+                          className={`${styles.about__top_IMG_circle} ${styles.about__top_IMG_circle_1}`}
+                        >
+                          <img src="/exp01.png" alt="" />
+                        </div>
+                        <div
+                          className={`${styles.about__top_IMG_circle} ${styles.about__top_IMG_circle_2}`}
+                        >
+                          <img src="/exp1.png" alt="" />
+                        </div>
+                        <div
+                          className={`${styles.about__top_IMG_circle} ${styles.about__top_IMG_circle_3}`}
+                        >
+                          <img src="/img3.png" alt="" />
+                        </div>
+                        <div
+                          className={`${styles.about__top_IMG_circle} ${styles.about__top_IMG_circle_4}`}
+                        >
+                          <img src="/img2.png" alt="" />
+                        </div>
+                        <div
+                          className={`${styles.about__top_IMG_circle} ${styles.about__top_IMG_circle_5}`}
+                        >
+                          <img src="/exp02.png" alt="" />
+                        </div>
+                        <div
+                          className={`${styles.about__top_IMG_circle} ${styles.about__top_IMG_circle_6}`}
+                        >
+                          <img src="/exp03.png" alt="" />
+                        </div>
+                      </div>
+
                       <div className={styles.about__top_TXT}>
                         <p className={styles.about__TXT}>
                           Мы стали приглашать экспертов из разных областей
@@ -132,6 +170,12 @@ export default function About() {
                     </p>
                   </div>
                   <div className={styles.about__bot_right}>
+                    <img
+                      className={styles.about__bot_right_bg}
+                      src="/Vector.svg"
+                      alt=""
+                      aria-hidden="true"
+                    />
                     <p className={styles.about__prin_title}>
                       Наш главный принцип
                     </p>
@@ -160,7 +204,11 @@ export default function About() {
               </p>
               <div className={styles.bot__container}>
                 <div className={styles.bot__conteiner_info}>
-                  <img className={styles.bot__icon} src="./stat2.svg" alt="" />
+                  <img
+                    className={styles.bot__icon}
+                    src="./briefcase.svg"
+                    alt=""
+                  />
                   <p className={styles.text_work}>Для руководителей</p>
                   <p className={styles.text_work_tezt}>
                     которые ищут новые инструменты управления.
@@ -168,7 +216,7 @@ export default function About() {
                 </div>
 
                 <div className={styles.bot__conteiner_info}>
-                  <img className={styles.bot__icon} src="./stat2.svg" alt="" />
+                  <img className={styles.bot__icon} src="./star.svg" alt="" />
                   <p className={styles.text_work}>Для специалистов</p>
                   <p className={styles.text_work_tezt}>
                     которые хотят следить за изменениями.
@@ -176,7 +224,11 @@ export default function About() {
                 </div>
 
                 <div className={styles.bot__conteiner_info}>
-                  <img className={styles.bot__icon} src="./stat2.svg" alt="" />
+                  <img
+                    className={styles.bot__icon}
+                    src="./teacher.svg"
+                    alt=""
+                  />
                   <p className={styles.text_work}>Для студентов</p>
                   <p className={styles.text_work_tezt}>
                     которые хотят слышать не только теорию, но и реальные кейсы.

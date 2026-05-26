@@ -14,7 +14,7 @@ export default function Main() {
   const prevRef = useRef(null);
   const paginationRef = useRef(null);
   return (
-    <div className="div">
+    <div className={styles.page}>
       <div className={styles.main__container}>
         <div className="container">
           <div className={styles.content}>

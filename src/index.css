@@ -6,48 +6,67 @@
   box-sizing: border-box;
 }
 
-/* ==================== ШРИФТ 1: ALTER AVES (остаётся) ==================== */
+/* ==================== ALTER AVES (заголовки) ==================== */
 
-/* Основной шрифт (обычное начертание) */
 @font-face {
   font-family: "Alter Aves";
   src:
+    url("./fonts/Glen Jan - AlterAves.otf") format("opentype"),
     url("./fonts/alter_aves.woff") format("woff"),
-    url("./fonts/alter_aves.ttf") format("truetype"),
-    url("./fonts/alter_aves.eot") format("embedded-opentype");
-  font-weight: normal;
+    url("./fonts/alter_aves.ttf") format("truetype");
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
-/* Жирное начертание */
 @font-face {
   font-family: "Alter Aves";
   src: url("./fonts/Alter_Aves_Makelove.otf") format("opentype");
-  font-weight: bold;
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
-/* ==================== ШРИФТ 2: GT WALSHEIM PRO (НОВЫЙ) ==================== */
+/* ==================== GT WALSHEIM PRO (основной текст) ==================== */
 
-/* Обычное начертание (Regular) */
 @font-face {
   font-family: "GT Walsheim Pro";
-  src: url("./fonts/GT-Walsheim-Pro-Regular.otf") format("otf");
-  font-weight: normal;
+  src: url("./fonts/GT-Walsheim-Pro-Regular.otf") format("opentype");
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
-/* Основной шрифт для всего приложения (оставляем Alter Aves) */
-body {
-  font-family: "GT Walsheim Pro", sans-serif;
-  /*                 ↑ основной     ↑ запасной       ↑ системный */
+:root {
+  --font-display: "Alter Aves", sans-serif;
+  --font-body: "GT Walsheim Pro", Arial, sans-serif;
 }
 
-/* Пример: для параграфов - обычное начертание GT Walsheim Pro */
-p {
-  font-family: "GT Walsheim Pro", sans-serif;
-  font-weight: normal;
+html {
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: 400;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+  font-weight: 400;
 }

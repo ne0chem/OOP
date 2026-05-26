@@ -2,13 +2,14 @@
 .speed__string {
   background-color: #ff0f43;
   border-radius: 0 0 30px 30px;
-  margin-top: -40px;
+  margin-top: -50px;
   height: 60px;
   overflow: hidden;
   display: flex;
   align-items: center;
   position: relative;
-  z-index: 10;
+  z-index: 30;
+  isolation: isolate;
 }
 
 .text__speed {
