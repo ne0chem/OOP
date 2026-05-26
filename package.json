@@ -26,6 +26,12 @@
       "react-app/jest"
     ]
   },
+  "overrides": {
+    "glob": "9.0.0",
+    "rimraf": "5.0.0",
+    "inflight": "2.0.0",
+    "whatwg-encoding": "npm:@exodus/bytes@latest"
+  },
   "browserslist": {
     "production": [
       ">0.2%",
