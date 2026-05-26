@@ -1,0 +1,100 @@
+.vebinars__container {
+  background-color: #e9eaee;
+  height: 800px;
+}
+
+.vebinars__header {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.vebinars__header__title {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 100%;
+  color: #1a1230;
+  margin-top: 100px;
+}
+
+.vebinars__header__text {
+  font-weight: 300;
+  color: #6f6f6f;
+  line-height: 100%;
+  font-size: 14px;
+}
+
+.inputWrapper {
+  display: flex;
+  gap: 12px; /* Добавил отступ между инпутом и кнопкой */
+  align-items: center;
+  margin-top: 20px; /* Добавил отступ сверху */
+  margin-top: 60px;
+}
+
+.input {
+  height: 48px;
+  padding: 8px 16px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 519px;
+}
+
+.input input {
+  flex: 1;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #7c8092;
+  font-size: 16px;
+}
+
+.input input::placeholder {
+  color: #7c8092;
+  font-size: 16px;
+}
+
+.button {
+  width: 65px;
+  height: 60px;
+  border-radius: 12px;
+  padding: 12px;
+  background-color: #a486e3;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.buttonText {
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+}
+.button__wrapper {
+  width: 1200px;
+  display: flex;
+  gap: 12px;
+  margin-top: 34px;
+}
+.button__card {
+  padding: 6px 16px 8px 16px;
+  border: 1 px solid #191816;
+  border-radius: 66px;
+  font-size: 18px;
+  line-height: 24%;
+}
+.button__card:hover {
+  color: #ffffff;
+  background-color: #1a1230;
+}
+.button__card:active {
+  color: #ffffff;
+  background-color: #1a1230;
+}

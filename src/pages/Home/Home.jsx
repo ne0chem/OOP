@@ -2,6 +2,8 @@ import styles from "./Main.module.css";
 import { expertsData } from "../../expert.js";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { useRef } from "react";
+import Social from "../../components/Social/Social.jsx";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -251,30 +253,38 @@ export default function Main() {
           </div>
 
           <div className={styles.expert__wrapper}>
+            {/* Заголовок и кнопки навигации */}
+            <div className={styles.expert__header}>
+              <h2 className={styles.expert__tx_dop}>
+                Спикеры и практики из разных сфер: управления, психологии,
+                коммуникаций, бизнеса и цифровой среды.{" "}
+              </h2>
+              <div className={styles.expert__nav}>
+                <p ref={prevRef} className={styles.swiper__prev}>
+                  <img src="/Arrow2.svg" alt="Prev" />
+                </p>
+                <p ref={nextRef} className={styles.swiper__next}>
+                  <img src="/Arrow1.svg" alt="Next" />
+                </p>
+              </div>
+            </div>
+
+            {/* Карусель */}
             <Swiper
               modules={[Navigation, Pagination, Autoplay]}
               spaceBetween={30}
               slidesPerView={1}
-              loop={true} // Добавляем бесконечную прокрутку
+              loop={true}
               autoplay={{
                 delay: 3000,
                 disableOnInteraction: false,
               }}
               breakpoints={{
-                640: {
-                  slidesPerView: 1,
-                },
-                768: {
-                  slidesPerView: 2,
-                },
-                1024: {
-                  slidesPerView: 3,
-                },
-                1280: {
-                  slidesPerView: 4,
-                },
+                640: { slidesPerView: 1 },
+                768: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 },
+                1280: { slidesPerView: 4 },
               }}
-              // Используем рефы для навигации
               onInit={(swiper) => {
                 swiper.params.navigation.prevEl = prevRef.current;
                 swiper.params.navigation.nextEl = nextRef.current;
@@ -289,11 +299,8 @@ export default function Main() {
               {expertsData.map((expert) => (
                 <SwiperSlide key={expert.id}>
                   <div className={styles.expert__card}>
-                    {/* Верхний блок — фото */}
                     <div className={styles.expert__photo}>
                       <img src={expert.photo} alt={expert.name} />
-
-                      {/* Описание (имя, должности) — поверх фото */}
                       <div className={styles.expert__overlay}>
                         <p className={styles.expert__name}>{expert.name}</p>
                         <p className={styles.expert__role}>{expert.role}</p>
@@ -303,15 +310,14 @@ export default function Main() {
                       </div>
                     </div>
 
-                    {/* Нижняя часть — кнопки и текст */}
                     <div className={styles.expert__footer}>
                       <div className={styles.expert__buttons}>
                         <button className={styles.btn__webinar}>
                           {expert.buttonText}
                         </button>
-                        <button className={styles.btn__arr}>
+                        <p className={styles.btn__arr}>
                           <img src="/arrow.svg" alt="стрелка" />
-                        </button>
+                        </p>
                       </div>
                       <p className={styles.expert__text}>{expert.footerText}</p>
                     </div>
@@ -320,15 +326,7 @@ export default function Main() {
               ))}
             </Swiper>
 
-            {/* Кнопки навигации с рефами */}
-            <div ref={prevRef} className={styles.swiper__prev}>
-              <img src="/arrow-prev.svg" alt="Prev" />
-            </div>
-            <div ref={nextRef} className={styles.swiper__next}>
-              <img src="/arrow-next.svg" alt="Next" />
-            </div>
-
-            {/* Пагинация с рефом */}
+            {/* Пагинация */}
             <div
               ref={paginationRef}
               className={styles.swiper__pagination}
@@ -336,6 +334,71 @@ export default function Main() {
           </div>
         </div>
       </div>
+      <div className={styles.cool__container}>
+        <div className="container">
+          <div className={styles.cool__content}>
+            <div className={styles.cool__content__top}>
+              <div className={styles.cool__left__top}>
+                <p className={styles.text__title}>ОТКРЫТОЕ</p>
+                <p className={styles.text__red}>ОБРАЗОВАТЕЛЬНОЕ</p>
+                <p className={styles.text__title}>ПРОСТРАНСТВО</p>
+              </div>
+              <div className={styles.cool__right__top}>
+                <p className={styles.cool__text}>
+                  Проект, созданный в 2020 году. Команда проводит бесплатные
+                  вебинары, подкасты, интервью и конференции с участием
+                  экспертов из разных областей знаний.
+                </p>
+                <p className={styles.cool__text__dop}>
+                  Цель проекта — сделать образование доступным и создать
+                  пространство для развития и обмена опытом.
+                </p>
+                <div className={styles.webinar__right}>
+                  <p className={styles.button__cool}>Подробнее</p>
+                  <img src="./arrowPink.svg" alt="" />
+                </div>
+              </div>
+            </div>
+            <div className={styles.cool__content__bot}>
+              <div className={styles.cool__bot__top}>
+                <div className={styles.cool__icon__container}>
+                  <img
+                    className={styles.cool__icon}
+                    src="./stat01.svg"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <p className={styles.cool__text__info}>600+ </p>
+                  <p className={styles.cool__text__infD}>вебинаров</p>
+                </div>
+              </div>
+              <div className={styles.cool__bot__center}>
+                <div>
+                  <img className={styles.cool__icon} src="./stat2.svg" alt="" />
+                </div>
+                <div>
+                  <p className={styles.cool__text__info}>100 000+ </p>
+                  <p className={styles.cool__text__infD}>слушателей</p>
+                </div>
+                <div>
+                  <img className={styles.img__rel} src="./mac.svg" alt="" />
+                </div>
+              </div>
+              <div className={styles.cool__bot__bot}>
+                <div>
+                  <img className={styles.cool__icon} src="./stat3.svg" alt="" />
+                </div>
+                <div>
+                  <p className={styles.cool__text__info}>20+</p>
+                  <p className={styles.cool__text__infD}>тематик</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <Social />
     </div>
   );
 }

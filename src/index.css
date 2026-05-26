@@ -5,3 +5,49 @@
   padding: 0 20px;
   box-sizing: border-box;
 }
+
+/* ==================== ШРИФТ 1: ALTER AVES (остаётся) ==================== */
+
+/* Основной шрифт (обычное начертание) */
+@font-face {
+  font-family: "Alter Aves";
+  src:
+    url("./fonts/alter_aves.woff") format("woff"),
+    url("./fonts/alter_aves.ttf") format("truetype"),
+    url("./fonts/alter_aves.eot") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Жирное начертание */
+@font-face {
+  font-family: "Alter Aves";
+  src: url("./fonts/Alter_Aves_Makelove.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ==================== ШРИФТ 2: GT WALSHEIM PRO (НОВЫЙ) ==================== */
+
+/* Обычное начертание (Regular) */
+@font-face {
+  font-family: "GT Walsheim Pro";
+  src: url("./fonts/GT-Walsheim-Pro-Regular.otf") format("otf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Основной шрифт для всего приложения (оставляем Alter Aves) */
+body {
+  font-family: "GT Walsheim Pro", sans-serif;
+  /*                 ↑ основной     ↑ запасной       ↑ системный */
+}
+
+/* Пример: для параграфов - обычное начертание GT Walsheim Pro */
+p {
+  font-family: "GT Walsheim Pro", sans-serif;
+  font-weight: normal;
+}

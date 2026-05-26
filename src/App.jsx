@@ -12,9 +12,9 @@ function App() {
       <Routes>
         <Route path="/" element={<MainLayout />}>
           <Route index element={<Home />} />
-          {/* <Route path="about" element={<About />} /> */}
+          <Route path="about" element={<About />} />
           {/* <Route path="calendar" element={<Calendar />} /> */}
-          {/* <Route path="webinars" element={<Vebinars />} /> */}
+          <Route path="webinars" element={<Vebinars />} />
         </Route>
       </Routes>
     </BrowserRouter>
