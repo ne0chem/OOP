@@ -9,7 +9,7 @@ import Expert from "./pages/Expert/Expert.jsx";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route path="/" element={<MainLayout />}>
           <Route index element={<Home />} />
