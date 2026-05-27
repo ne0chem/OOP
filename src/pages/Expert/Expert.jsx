@@ -1,4 +1,4 @@
-import { expertsData, button as filterButtons } from "../../expert.js";
+import { expertsData } from "../../expert.js";
 import styles from "./Expert.module.css";
 import { asset } from "../../utils/asset.js";
 
