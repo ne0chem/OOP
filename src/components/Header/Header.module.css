@@ -4,6 +4,11 @@
   background-color: var(--bg-color-violette);
   border-radius: 0 0 30px 30px;
   margin-bottom: -30px;
+  position: static !important;
+  top: auto;
+  left: auto;
+  right: auto;
+  bottom: auto;
 }
 
 .header {

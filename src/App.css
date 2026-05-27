@@ -26,3 +26,13 @@ body * {
 a {
   text-decoration: none;
 }
+
+/* Force app header to participate in normal page flow. */
+[class*="Header_container__header"],
+[class*="Header_header"] {
+  position: static !important;
+  top: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  left: auto !important;
+}

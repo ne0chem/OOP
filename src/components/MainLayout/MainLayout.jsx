@@ -28,9 +28,11 @@ export default function MainLayout() {
   return (
     <div className={styles.layout}>
       <main className={styles.layout__main}>
-        <Header onOpenQuestionModal={openQuestionModal} />
         <div className={styles.layout__content}>
-          <Outlet />
+          <Header onOpenQuestionModal={openQuestionModal} />
+          <div className={styles.layout__outlet}>
+            <Outlet />
+          </div>
         </div>
       </main>
       <Footer onOpenQuestionModal={openQuestionModal} />
