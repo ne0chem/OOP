@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react";
 import styles from "./Calendar.module.css";
+import { asset } from "../../utils/asset.js";
 
 const WEEK_DAYS = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"];
 
@@ -230,26 +231,26 @@ export default function Calendar() {
 
                 <div className={styles.event__meta}>
                   <p>
-                    <img src="/Calendar.svg" alt="" aria-hidden="true" />
+                    <img src={asset("/Calendar.svg")} alt="" aria-hidden="true" />
                     {selectedEvent.date}
                   </p>
                   <p>
-                    <img src="/Clock.svg" alt="" aria-hidden="true" />
+                    <img src={asset("/Clock.svg")} alt="" aria-hidden="true" />
                     {selectedEvent.time}
                   </p>
                   <p>
-                    <img src="/User11.svg" alt="" aria-hidden="true" />
+                    <img src={asset("/User11.svg")} alt="" aria-hidden="true" />
                     {selectedEvent.speaker}
                   </p>
                   <p>
-                    <img src="/MapPin11.svg" alt="" aria-hidden="true" />
+                    <img src={asset("/MapPin11.svg")} alt="" aria-hidden="true" />
                     {selectedEvent.place}
                   </p>
                 </div>
 
                 <button type="button" className={styles.event__button}>
                   Зарегистрироваться
-                  <img src="/arrow.svg" alt="" aria-hidden="true" />
+                  <img src={asset("/arrow.svg")} alt="" aria-hidden="true" />
                 </button>
               </div>
             ) : (
@@ -266,7 +267,7 @@ export default function Calendar() {
                   onClick={handleNearestClick}
                 >
                   Ближайшие вебинары
-                  <img src="/arrow.svg" alt="" aria-hidden="true" />
+                  <img src={asset("/arrow.svg")} alt="" aria-hidden="true" />
                 </button>
               </div>
             )}

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "./Header.module.css";
+import { asset } from "../../utils/asset.js";
 
 export default function Header() {
   return (
@@ -7,8 +8,8 @@ export default function Header() {
       <div className="container">
         <div className={styles.header}>
           <div className={styles.logo__container}>
-            <img className={styles.logo1} src="/logo.svg" alt="Logo" />
-            <img className={styles.logo} src="/logo1.svg" alt="Logo 1" />
+            <img className={styles.logo1} src={asset("/logo.svg")} alt="Logo" />
+            <img className={styles.logo} src={asset("/logo1.svg")} alt="Logo 1" />
           </div>
           <nav className={styles.nav}>
             <Link className={styles.nav_color} to="/">

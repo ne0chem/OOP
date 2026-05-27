@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { useRef } from "react";
 import Social from "../../components/Social/Social.jsx";
+import { asset } from "../../utils/asset.js";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -30,7 +31,7 @@ export default function Main() {
               <div className={styles.container__button}>
                 <button className={styles.button__osn}>
                   <p>Смотреть записи</p>
-                  <img src="/arrow.svg" alt="" />
+                  <img src={asset("/arrow.svg")} alt="" />
                 </button>
                 <button className={styles.button__dop}>
                   Календарь событий
@@ -39,8 +40,8 @@ export default function Main() {
             </div>
 
             <div className={styles.images}>
-              <img className={styles.micro__icon} src="/mikro.svg" alt="" />
-              <img className={styles.icon} src="/icon.svg" alt="" />
+              <img className={styles.micro__icon} src={asset("/mikro.svg")} alt="" />
+              <img className={styles.icon} src={asset("/icon.svg")} alt="" />
             </div>
           </div>
         </div>
@@ -70,14 +71,14 @@ export default function Main() {
               <p className={styles.webinar__header__text}>Все мероприятия</p>
               <img
                 className={styles.webinar__header__img}
-                src="./arrowPink.svg"
+                src={asset("/arrowPink.svg")}
                 alt=""
               />
             </div>
           </div>
           <div className={styles.webinar__bot}>
             <div className={styles.container__img}>
-              <img src="/q.jpg" alt="Вебинар" />
+              <img src={asset("/q.jpg")} alt="Вебинар" />
             </div>
 
             {/* Правая часть 40% */}
@@ -88,13 +89,13 @@ export default function Main() {
                   <div className={styles.container__time}>
                     <img
                       className={styles.container__time__img}
-                      src="./Clock.svg"
+                      src={asset("/Clock.svg")}
                       alt=""
                     />
                     <p className={styles.text__time}>18:00 МСК</p>
                   </div>
                   <div className={styles.container__time}>
-                    <img src="./Calendar.svg" alt="" />
+                    <img src={asset("/Calendar.svg")} alt="" />
 
                     <p className={styles.text__time}>5 апреля 2026</p>
                   </div>
@@ -116,7 +117,7 @@ export default function Main() {
                     <div className={styles.speacker}>
                       <img
                         className={styles.container__img__speacer}
-                        src="/q1.png"
+                        src={asset("/q1.png")}
                         alt="Спикер"
                       />
                     </div>
@@ -133,7 +134,7 @@ export default function Main() {
                 <div className={styles.bu}>
                   <button className={styles.button__osn}>
                     <p>Смотреть записи</p>
-                    <img src="/arrow.svg" alt="" />
+                    <img src={asset("/arrow.svg")} alt="" />
                   </button>
                 </div>
               </div>
@@ -149,7 +150,7 @@ export default function Main() {
               <p className={styles.webinar__header__text}>Все выпуски</p>
               <img
                 className={styles.webinar__header__img}
-                src="./arrowPink.svg"
+                src={asset("/arrowPink.svg")}
                 alt=""
               />
             </div>
@@ -159,11 +160,11 @@ export default function Main() {
             <div className={styles.video__card}>
               <img
                 className={styles.video__image}
-                src="/image.jpg"
+                src={asset("/image.jpg")}
                 alt="Видео"
               />
               <div className={styles.video__duration}>
-                <img src="/polugon.svg" alt="Play" />
+                <img src={asset("/polugon.svg")} alt="Play" />
                 <span>32:40</span>
               </div>
               <div className={styles.video__info}>
@@ -180,11 +181,11 @@ export default function Main() {
             <div className={styles.video__card}>
               <img
                 className={styles.video__image}
-                src="/image2.jpg"
+                src={asset("/image2.jpg")}
                 alt="Видео"
               />
               <div className={styles.video__duration}>
-                <img src="/polugon.svg" alt="Play" />
+                <img src={asset("/polugon.svg")} alt="Play" />
                 <span>40:14</span>
               </div>
               <div className={styles.video__info}>
@@ -201,11 +202,11 @@ export default function Main() {
             <div className={styles.video__card}>
               <img
                 className={styles.video__image}
-                src="/image3.jpg"
+                src={asset("/image3.jpg")}
                 alt="Видео"
               />
               <div className={styles.video__duration}>
-                <img src="/polugon.svg" alt="Play" />
+                <img src={asset("/polugon.svg")} alt="Play" />
                 <span>25:18</span>
               </div>
               <div className={styles.video__info}>
@@ -222,11 +223,11 @@ export default function Main() {
             <div className={styles.video__card}>
               <img
                 className={styles.video__image}
-                src="/image4.jpg"
+                src={asset("/image4.jpg")}
                 alt="Видео"
               />
               <div className={styles.video__duration}>
-                <img src="/polugon.svg" alt="Play" />
+                <img src={asset("/polugon.svg")} alt="Play" />
                 <span>52:10</span>
               </div>
               <div className={styles.video__info}>
@@ -248,7 +249,7 @@ export default function Main() {
             <p className={styles.text_t}>Наши эксперты</p>
             <button className={styles.button__osn}>
               <p>Стать экспертом</p>
-              <img src="/arrow.svg" alt="" />
+              <img src={asset("/arrow.svg")} alt="" />
             </button>
           </div>
 
@@ -261,10 +262,10 @@ export default function Main() {
               </h2>
               <div className={styles.expert__nav}>
                 <p ref={prevRef} className={styles.swiper__prev}>
-                  <img src="/Arrow2.svg" alt="Prev" />
+                  <img src={asset("/Arrow2.svg")} alt="Prev" />
                 </p>
                 <p ref={nextRef} className={styles.swiper__next}>
-                  <img src="/Arrow1.svg" alt="Next" />
+                  <img src={asset("/Arrow1.svg")} alt="Next" />
                 </p>
               </div>
             </div>
@@ -316,7 +317,7 @@ export default function Main() {
                           {expert.buttonText}
                         </button>
                         <p className={styles.btn__arr}>
-                          <img src="/arrow.svg" alt="стрелка" />
+                          <img src={asset("/arrow.svg")} alt="стрелка" />
                         </p>
                       </div>
                       <p className={styles.expert__text}>{expert.footerText}</p>
@@ -355,7 +356,7 @@ export default function Main() {
                 </p>
                 <div className={styles.webinar__right}>
                   <p className={styles.button__cool}>Подробнее</p>
-                  <img src="./arrowPink.svg" alt="" />
+                  <img src={asset("/arrowPink.svg")} alt="" />
                 </div>
               </div>
             </div>
@@ -364,7 +365,7 @@ export default function Main() {
                 <div className={styles.cool__icon__container}>
                   <img
                     className={styles.cool__icon}
-                    src="./stat01.svg"
+                    src={asset("/stat01.svg")}
                     alt=""
                   />
                 </div>
@@ -375,19 +376,19 @@ export default function Main() {
               </div>
               <div className={styles.cool__bot__center}>
                 <div>
-                  <img className={styles.cool__icon} src="./stat2.svg" alt="" />
+                  <img className={styles.cool__icon} src={asset("/stat2.svg")} alt="" />
                 </div>
                 <div>
                   <p className={styles.cool__text__info}>100 000+ </p>
                   <p className={styles.cool__text__infD}>слушателей</p>
                 </div>
                 <div>
-                  <img className={styles.img__rel} src="./mac.svg" alt="" />
+                  <img className={styles.img__rel} src={asset("/mac.svg")} alt="" />
                 </div>
               </div>
               <div className={styles.cool__bot__bot}>
                 <div>
-                  <img className={styles.cool__icon} src="./stat3.svg" alt="" />
+                  <img className={styles.cool__icon} src={asset("/stat3.svg")} alt="" />
                 </div>
                 <div>
                   <p className={styles.cool__text__info}>20+</p>

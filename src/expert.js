@@ -1,11 +1,13 @@
 // expertsData.js
+import { asset } from "./utils/asset.js";
+
 export const expertsData = [
   {
     id: 1,
     name: "Александр Иванов",
     role: "Городские сервисы",
     description: "Эксперт по цифровой трансформации",
-    photo: "./exp1.png",
+    photo: asset("/exp1.png"),
     buttonText: "Вебинар",
     footerText: "Цифровые решения для города и жителей",
   },
@@ -14,7 +16,7 @@ export const expertsData = [
     name: "Юлия Андреева",
     role: "Счётная палата РФ",
     description: "Директор программ ВШГУ РАНХиГС",
-    photo: "./img3.png",
+    photo: asset("/img3.png"),
     buttonText: "Вебинар",
     footerText: "Язык доверия: как государству общаться с гражданами",
   },
@@ -23,7 +25,7 @@ export const expertsData = [
     name: "Мария Смирнова",
     role: "Открытое образовательное пространство",
     description: "Практикующий психолог",
-    photo: "./img2.png",
+    photo: asset("/img2.png"),
     buttonText: "Вебинар",
     footerText: "Практикующий психолог",
   },
@@ -32,7 +34,7 @@ export const expertsData = [
     name: "Александр Иванов",
     role: "Городские сервисы",
     description: "Эксперт по цифровой трансформации",
-    photo: "./exp1.png",
+    photo: asset("/exp1.png"),
     buttonText: "Вебинар",
     footerText: "Цифровые решения для города и жителей",
   },
@@ -41,7 +43,7 @@ export const expertsData = [
     name: "Юлия Андреева",
     role: "Счётная палата РФ",
     description: "Директор программ ВШГУ РАНХиГС",
-    photo: "./img3.png",
+    photo: asset("/img3.png"),
     buttonText: "Вебинар",
     footerText: "Язык доверия: как государству общаться с гражданами",
   },
@@ -50,7 +52,7 @@ export const expertsData = [
     name: "Мария Смирнова",
     role: "Открытое образовательное пространство",
     description: "Практикующий психолог",
-    photo: "./img2.png",
+    photo: asset("/img2.png"),
     buttonText: "Вебинар",
     footerText: "Практикующий психолог",
   },
@@ -71,31 +73,31 @@ export const card = [
   {
     id: 11,
     title: "Эмоциональный интеллект: зачем он нужен и как развивать",
-    img: "./image.jpg",
+    img: asset("/image.jpg"),
   },
   {
     id: 12,
     title: "Публичные выступления: от страха к уверенности",
-    img: "./image2.jpg",
+    img: asset("/image2.jpg"),
   },
   {
     id: 13,
     title: "Подкаст: Цифровая трансформация бизнеса",
-    img: "./image3.jpg",
+    img: asset("/image3.jpg"),
   },
   {
     id: 14,
     title: "Публичные выступления: от страха к уверенности",
-    img: "./image2.jpg",
+    img: asset("/image2.jpg"),
   },
   {
     id: 15,
     title: "Подкаст: Цифровая трансформация бизнеса",
-    img: "./image3.jpg",
+    img: asset("/image3.jpg"),
   },
   {
     id: 16,
     title: "Эмоциональный интеллект: зачем он нужен и как развивать",
-    img: "./image.jpg",
+    img: asset("/image.jpg"),
   },
 ];

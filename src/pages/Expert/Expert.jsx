@@ -1,5 +1,6 @@
 import { expertsData, button as filterButtons } from "../../expert.js";
 import styles from "./Expert.module.css";
+import { asset } from "../../utils/asset.js";
 
 const GRID_EXPERTS = Array.from({ length: 9 }, (_, index) => ({
   ...expertsData[index % expertsData.length],
@@ -21,7 +22,7 @@ export default function Expert() {
 
           <button type="button" className={styles.expert__cta}>
             <span>Стать экспертом</span>
-            <img src="/arrow.svg" alt="" aria-hidden="true" />
+            <img src={asset("/arrow.svg")} alt="" aria-hidden="true" />
           </button>
         </div>
 
@@ -89,7 +90,7 @@ export default function Expert() {
                     {expert.buttonText}
                   </button>
                   <span className={styles.btn__arr}>
-                    <img src="/arrow.svg" alt="" aria-hidden="true" />
+                    <img src={asset("/arrow.svg")} alt="" aria-hidden="true" />
                   </span>
                 </div>
                 <p className={styles.expert__text}>{expert.footerText}</p>
@@ -100,7 +101,7 @@ export default function Expert() {
 
         <div className={styles.expert__bottom}>
           <p className={styles.expert__bottom__text}>Все эксперты</p>
-          <img src="/arrowPink.svg" alt="" aria-hidden="true" />
+          <img src={asset("/arrowPink.svg")} alt="" aria-hidden="true" />
         </div>
       </div>
     </div>

@@ -1,6 +1,7 @@
 import styles from "./Vebinars.module.css";
 import { button } from "../../expert.js";
 import { card } from "../../expert.js";
+import { asset } from "../../utils/asset.js";
 
 export default function Vabinars() {
   return (
@@ -75,7 +76,7 @@ export default function Vabinars() {
               <div
                 className={styles.card__image}
                 style={{
-                  backgroundImage: `url(${item.img || "/placeholder.jpg"})`,
+                  backgroundImage: `url(${item.img || asset("/image.jpg")})`,
                 }}
               >
                 {/* Кнопка Play - отдельно от overlay */}

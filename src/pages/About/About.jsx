@@ -1,6 +1,7 @@
 import styles from "./About.module.css";
 import SprintSrtring from "../../components/SprintSrtring/SprintSrtring.jsx";
 import Social from "../../components/Social/Social.jsx";
+import { asset } from "../../utils/asset.js";
 export default function About() {
   return (
     <>
@@ -10,7 +11,7 @@ export default function About() {
             <div className={styles.cool__content}>
               <img
                 className={styles.cool__vector_right}
-                src="/Vector.svg"
+                src={asset("/Vector.svg")}
                 alt=""
                 aria-hidden="true"
               />
@@ -26,7 +27,7 @@ export default function About() {
                   <div className={styles.cool__icon__container}>
                     <img
                       className={styles.cool__icon}
-                      src="./stat01.svg"
+                      src={asset("/stat01.svg")}
                       alt=""
                     />
                   </div>
@@ -39,7 +40,7 @@ export default function About() {
                   <div>
                     <img
                       className={styles.cool__icon}
-                      src="./stat2.svg"
+                      src={asset("/stat2.svg")}
                       alt=""
                     />
                   </div>
@@ -48,14 +49,14 @@ export default function About() {
                     <p className={styles.cool__text__infD}>слушателей</p>
                   </div>
                   <div>
-                    <img className={styles.img__rel} src="./mac.svg" alt="" />
+                    <img className={styles.img__rel} src={asset("/mac.svg")} alt="" />
                   </div>
                 </div>
                 <div className={styles.cool__bot__bot}>
                   <div>
                     <img
                       className={styles.cool__icon}
-                      src="./stat3.svg"
+                      src={asset("/stat3.svg")}
                       alt=""
                     />
                   </div>
@@ -78,12 +79,12 @@ export default function About() {
                   <div className={styles.about__imgLT}>
                     <img
                       className={styles.about__imgL2}
-                      src="/icon.svg"
+                      src={asset("/icon.svg")}
                       alt=""
                     />
                     <img
                       className={styles.about__imgL1}
-                      src="/micro2.png"
+                      src={asset("/micro2.png")}
                       alt=""
                     />
                   </div>
@@ -111,32 +112,32 @@ export default function About() {
                         <div
                           className={`${styles.about__top_IMG_circle} ${styles.about__top_IMG_circle_1}`}
                         >
-                          <img src="/exp01.png" alt="" />
+                          <img src={asset("/exp01.png")} alt="" />
                         </div>
                         <div
                           className={`${styles.about__top_IMG_circle} ${styles.about__top_IMG_circle_2}`}
                         >
-                          <img src="/exp1.png" alt="" />
+                          <img src={asset("/exp1.png")} alt="" />
                         </div>
                         <div
                           className={`${styles.about__top_IMG_circle} ${styles.about__top_IMG_circle_3}`}
                         >
-                          <img src="/img3.png" alt="" />
+                          <img src={asset("/img3.png")} alt="" />
                         </div>
                         <div
                           className={`${styles.about__top_IMG_circle} ${styles.about__top_IMG_circle_4}`}
                         >
-                          <img src="/img2.png" alt="" />
+                          <img src={asset("/img2.png")} alt="" />
                         </div>
                         <div
                           className={`${styles.about__top_IMG_circle} ${styles.about__top_IMG_circle_5}`}
                         >
-                          <img src="/exp02.png" alt="" />
+                          <img src={asset("/exp02.png")} alt="" />
                         </div>
                         <div
                           className={`${styles.about__top_IMG_circle} ${styles.about__top_IMG_circle_6}`}
                         >
-                          <img src="/exp03.png" alt="" />
+                          <img src={asset("/exp03.png")} alt="" />
                         </div>
                       </div>
 
@@ -172,7 +173,7 @@ export default function About() {
                   <div className={styles.about__bot_right}>
                     <img
                       className={styles.about__bot_right_bg}
-                      src="/Vector.svg"
+                      src={asset("/Vector.svg")}
                       alt=""
                       aria-hidden="true"
                     />
@@ -206,7 +207,7 @@ export default function About() {
                 <div className={styles.bot__conteiner_info}>
                   <img
                     className={styles.bot__icon}
-                    src="./briefcase.svg"
+                    src={asset("/briefcase.svg")}
                     alt=""
                   />
                   <p className={styles.text_work}>Для руководителей</p>
@@ -216,7 +217,7 @@ export default function About() {
                 </div>
 
                 <div className={styles.bot__conteiner_info}>
-                  <img className={styles.bot__icon} src="./star.svg" alt="" />
+                  <img className={styles.bot__icon} src={asset("/star.svg")} alt="" />
                   <p className={styles.text_work}>Для специалистов</p>
                   <p className={styles.text_work_tezt}>
                     которые хотят следить за изменениями.
@@ -226,7 +227,7 @@ export default function About() {
                 <div className={styles.bot__conteiner_info}>
                   <img
                     className={styles.bot__icon}
-                    src="./teacher.svg"
+                    src={asset("/teacher.svg")}
                     alt=""
                   />
                   <p className={styles.text_work}>Для студентов</p>

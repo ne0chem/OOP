@@ -1,5 +1,6 @@
 import styles from "./Footer.module.css";
 import { Link } from "react-router-dom";
+import { asset } from "../../utils/asset.js";
 export default function Footer() {
   return (
     <>
@@ -9,8 +10,8 @@ export default function Footer() {
             <div className={styles.footer__top_top}>
               <div className={styles.footer__top}>
                 <div className={styles.logo__container}>
-                  <img className={styles.logo1} src="/logo.svg" alt="Logo" />
-                  <img className={styles.logo} src="/logo1.svg" alt="Logo 1" />
+                  <img className={styles.logo1} src={asset("/logo.svg")} alt="Logo" />
+                  <img className={styles.logo} src={asset("/logo1.svg")} alt="Logo 1" />
                 </div>
                 <div className={styles.footer.top_bot}>
                   <p className={styles.footer__text}>

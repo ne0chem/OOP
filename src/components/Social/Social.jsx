@@ -1,4 +1,5 @@
 import styles from "./Social.module.css";
+import { asset } from "../../utils/asset.js";
 
 export default function About() {
   return (
@@ -14,34 +15,42 @@ export default function About() {
           </div>
           <div className={styles.social__container__bot}>
             <div className={styles.cocial__img__container}>
-              <img className={styles.social__img} src="./vk.svg" alt="" />
+              <img className={styles.social__img} src={asset("/vk.svg")} alt="" />
             </div>
 
             <div className={styles.cocial__img__container}>
-              <img className={styles.social__img} src="./rutube.svg" alt="" />
+              <img
+                className={styles.social__img}
+                src={asset("/rutube.svg")}
+                alt=""
+              />
             </div>
 
             <div className={styles.cocial__img__container}>
-              <img className={styles.social__img} src="./dzen.svg" alt="" />
+              <img className={styles.social__img} src={asset("/dzen.svg")} alt="" />
             </div>
 
             <div className={styles.cocial__img__container}>
-              <img className={styles.social__img} src="./un.svg" alt="" />
+              <img className={styles.social__img} src={asset("/un.svg")} alt="" />
             </div>
             <div className={styles.cocial__img__container}>
-              <img className={styles.social__img} src="./clip.svg" alt="" />
-            </div>
-
-            <div className={styles.cocial__img__container}>
-              <img className={styles.social__img} src="./th.svg" alt="" />
+              <img className={styles.social__img} src={asset("/clip.svg")} alt="" />
             </div>
 
             <div className={styles.cocial__img__container}>
-              <img className={styles.social__img} src="./tench.svg" alt="" />
+              <img className={styles.social__img} src={asset("/th.svg")} alt="" />
             </div>
 
             <div className={styles.cocial__img__container}>
-              <img className={styles.social__img} src="./max.svg" alt="" />
+              <img
+                className={styles.social__img}
+                src={asset("/tench.svg")}
+                alt=""
+              />
+            </div>
+
+            <div className={styles.cocial__img__container}>
+              <img className={styles.social__img} src={asset("/max.svg")} alt="" />
             </div>
           </div>
         </div>
