@@ -1,7 +1,11 @@
 import styles from "./Footer.module.css";
 import { Link } from "react-router-dom";
 import { asset } from "../../utils/asset.js";
-export default function Footer() {
+export default function Footer({ onOpenQuestionModal }) {
+  const handleNavClick = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <>
       <div className={styles.footer}>
@@ -21,19 +25,31 @@ export default function Footer() {
                 </div>
               </div>
               <nav className={styles.footer_nav}>
-                <Link className={styles.nav_color} to="/">
+                <Link className={styles.nav_color} to="/" onClick={handleNavClick}>
                   Главная
                 </Link>
-                <Link className={styles.nav_color} to="/calendar">
+                <Link
+                  className={styles.nav_color}
+                  to="/calendar"
+                  onClick={handleNavClick}
+                >
                   Календарь событий
                 </Link>
-                <Link className={styles.nav_color} to="/webinars">
+                <Link
+                  className={styles.nav_color}
+                  to="/webinars"
+                  onClick={handleNavClick}
+                >
                   Все выпуски
                 </Link>
-                <Link className={styles.nav_color} to="/experts">
+                <Link
+                  className={styles.nav_color}
+                  to="/experts"
+                  onClick={handleNavClick}
+                >
                   Наши эксперты
                 </Link>
-                <Link className={styles.nav_color} to="/about">
+                <Link className={styles.nav_color} to="/about" onClick={handleNavClick}>
                   О нас
                 </Link>
               </nav>
@@ -47,7 +63,11 @@ export default function Footer() {
                   </p>
                 </div>
                 <div className={styles.footer__link_bot}>
-                  <button className={styles.footer__button}>
+                  <button
+                    type="button"
+                    className={styles.footer__button}
+                    onClick={onOpenQuestionModal}
+                  >
                     Задать вопрос
                   </button>
                 </div>

@@ -5,6 +5,7 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { useRef } from "react";
 import Social from "../../components/Social/Social.jsx";
 import { asset } from "../../utils/asset.js";
+import { Link } from "react-router-dom";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -14,6 +15,11 @@ export default function Main() {
   const nextRef = useRef(null);
   const prevRef = useRef(null);
   const paginationRef = useRef(null);
+
+  const handleNavClick = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <div className={styles.page}>
       <div className={styles.main__container}>
@@ -29,13 +35,21 @@ export default function Main() {
               </p>
 
               <div className={styles.container__button}>
-                <button className={styles.button__osn}>
+                <Link
+                  to="/webinars"
+                  className={styles.button__osn}
+                  onClick={handleNavClick}
+                >
                   <p>Смотреть записи</p>
                   <img src={asset("/arrow.svg")} alt="" />
-                </button>
-                <button className={styles.button__dop}>
+                </Link>
+                <Link
+                  to="/calendar"
+                  className={styles.button__dop}
+                  onClick={handleNavClick}
+                >
                   Календарь событий
-                </button>
+                </Link>
               </div>
             </div>
 
@@ -68,7 +82,13 @@ export default function Main() {
           <div className={styles.webinar__top}>
             <p className={styles.webinar__title}>Ближайший вебинар</p>
             <div className={styles.webinar__right}>
-              <p className={styles.webinar__header__text}>Все мероприятия</p>
+              <Link
+                to="/calendar"
+                className={styles.webinar__header__text}
+                onClick={handleNavClick}
+              >
+                Все мероприятия
+              </Link>
               <img
                 className={styles.webinar__header__img}
                 src={asset("/arrowPink.svg")}
@@ -132,10 +152,14 @@ export default function Main() {
                   </div>
                 </div>
                 <div className={styles.bu}>
-                  <button className={styles.button__osn}>
+                  <Link
+                    to="/webinars"
+                    className={styles.button__osn}
+                    onClick={handleNavClick}
+                  >
                     <p>Смотреть записи</p>
                     <img src={asset("/arrow.svg")} alt="" />
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -147,7 +171,13 @@ export default function Main() {
           <div className={styles.webinar__top}>
             <p className={styles.text_t}>Прошедшие вебинары</p>
             <div className={styles.webinar__right}>
-              <p className={styles.webinar__header__text}>Все выпуски</p>
+              <Link
+                to="/webinars"
+                className={styles.webinar__header__text}
+                onClick={handleNavClick}
+              >
+                Все выпуски
+              </Link>
               <img
                 className={styles.webinar__header__img}
                 src={asset("/arrowPink.svg")}
@@ -247,7 +277,7 @@ export default function Main() {
         <div className="container">
           <div className={styles.expetr__top}>
             <p className={styles.text_t}>Наши эксперты</p>
-            <button className={styles.button__osn}>
+            <button className={styles.button__osn1}>
               <p>Стать экспертом</p>
               <img src={asset("/arrow.svg")} alt="" />
             </button>

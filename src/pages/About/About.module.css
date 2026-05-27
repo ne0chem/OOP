@@ -26,6 +26,7 @@
   z-index: 1;
   overflow-x: clip;
   height: 100vh;
+  margin-bottom: 20px;
 }
 .cool__content {
   display: flex;
