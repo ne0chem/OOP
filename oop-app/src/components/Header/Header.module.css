@@ -1,4 +1,3 @@
-/* src/components/Header/Header.module.css */
 .container__header {
   width: 100%;
   background-color: var(--bg-color-violette);
@@ -14,14 +13,15 @@
 .header {
   display: flex;
   justify-content: space-between;
-  text-align: center;
   align-items: center;
   padding: 32px 20px 42px;
+  gap: 16px;
 }
 
 .logo__container {
   display: flex;
   gap: 32px;
+  flex-shrink: 0;
 }
 
 .logo1,
@@ -53,9 +53,103 @@
   font-size: 18px;
   font-weight: 500;
   color: #a486e3;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .questionBtn:hover {
   background-color: #a486e3;
   color: #ffffff;
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.burger span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #ffffff;
+  border-radius: 2px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.mobileMenu {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .nav,
+  .questionBtn {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .header {
+    padding: 20px 0 28px;
+  }
+
+  .logo1,
+  .logo {
+    height: 36px;
+  }
+
+  .logo__container {
+    gap: 16px;
+  }
+
+  .mobileMenu {
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background-color: var(--bg-color-violette);
+    border-radius: 0 0 24px 24px;
+  }
+
+  .mobileMenu_open {
+    max-height: 480px;
+  }
+
+  .mobileNav {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 8px 20px 28px;
+  }
+
+  .mobileNav__link {
+    color: #c1c2c7;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 1.2;
+  }
+
+  .mobileNav__question {
+    margin-top: 8px;
+    border: 1px solid #a486e3;
+    border-radius: 100px;
+    padding: 14px 26px;
+    color: #a486e3;
+    text-decoration: none;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+  }
 }

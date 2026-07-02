@@ -18,15 +18,14 @@
 .about {
   overflow-x: clip;
 }
-
 .cool__container_new {
   width: 100%;
   background-color: var(--bg-color-violette);
+  border-radius: 0 0 30px 30px;
   position: relative;
-  z-index: 1;
-  overflow-x: clip;
-  height: 100vh;
-  margin-bottom: 20px;
+  z-index: 10;
+  overflow: hidden;
+  height: 877px;
 }
 .cool__content {
   display: flex;
@@ -465,7 +464,7 @@
   color: #c1c2c7;
   line-height: 100%;
   font-weight: 300;
-  font-size: 14px;
+  font-size: 16px;
 }
 .vera {
   background-color: #e9eaee;
@@ -481,9 +480,16 @@
 
 .vera__text {
   font-weight: 300;
-  font-size: 17px;
+  font-size: 16px;
   line-height: 100%;
   color: #6f6f6f;
+}
+.vera__text1 {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 100%;
+  color: #6f6f6f;
+  margin-top: -37px;
 }
 .bot__conteiner_info {
   background-color: #1a1230;

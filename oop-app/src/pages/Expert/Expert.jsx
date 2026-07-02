@@ -1,32 +1,43 @@
-import { expertsData } from "../../expert.js";
 import styles from "./Expert.module.css";
 import { asset } from "../../utils/asset.js";
-
-const GRID_EXPERTS = Array.from({ length: 9 }, (_, index) => ({
-  ...expertsData[index % expertsData.length],
-  uid: index,
-}));
+import { cnWow } from "../../utils/wow.js";
+import { useExperts } from "../../hooks/useExperts.js";
 
 export default function Expert() {
+  const { experts } = useExperts();
+
   return (
     <div className={styles.expert__container}>
       <div className="container">
         <div className={styles.expert__top}>
           <div className={styles.expert__header}>
-            <p className={styles.expert__header__title}>Наши эксперты</p>
-            <p className={styles.expert__header__text}>
+            <p {...cnWow(styles.expert__header__title, "fadeInUp")}>
+              Наши эксперты
+            </p>
+            <p
+              {...cnWow(styles.expert__header__text, "fadeInUp", {
+                delay: "0.1s",
+              })}
+            >
               Спикеры и практики из разных сфер: управления, психологии,
               коммуникаций, бизнеса и цифровой среды.
             </p>
           </div>
 
-          <button type="button" className={styles.expert__cta}>
+          <button
+            type="button"
+            {...cnWow(styles.expert__cta, "fadeInLeft", {
+              delay: "0.15s",
+            })}
+          >
             <span>Стать экспертом</span>
             <img src={asset("/arrow.svg")} alt="" aria-hidden="true" />
           </button>
         </div>
 
-        <div className={styles.inputWrapper}>
+        <div
+          {...cnWow(styles.inputWrapper, "fadeInUp", { delay: "0.2s" })}
+        >
           <div className={styles.input}>
             <svg
               width="20"
@@ -71,8 +82,13 @@ export default function Expert() {
         </div>
 
         <div className={styles.experts__grid}>
-          {GRID_EXPERTS.map((expert) => (
-            <article key={expert.uid} className={styles.expert__card}>
+          {experts.map((expert, index) => (
+            <article
+              key={expert.id}
+              {...cnWow(styles.expert__card, "fadeInUp", {
+                delay: `${0.05 + (index % 6) * 0.08}s`,
+              })}
+            >
               <div className={styles.expert__photo}>
                 <img src={expert.photo} alt={expert.name} />
                 <div className={styles.expert__overlay}>
@@ -99,7 +115,9 @@ export default function Expert() {
           ))}
         </div>
 
-        <div className={styles.expert__bottom}>
+        <div
+          {...cnWow(styles.expert__bottom, "fadeIn", { delay: "0.15s" })}
+        >
           <p className={styles.expert__bottom__text}>Все эксперты</p>
           <img src={asset("/arrowPink.svg")} alt="" aria-hidden="true" />
         </div>

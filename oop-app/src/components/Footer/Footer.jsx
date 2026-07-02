@@ -1,7 +1,10 @@
 import styles from "./Footer.module.css";
 import { Link } from "react-router-dom";
 import { asset } from "../../utils/asset.js";
-export default function Footer({ onOpenQuestionModal }) {
+
+const QUESTION_URL = "https://openedu.moscow/q";
+
+export default function Footer() {
   const handleNavClick = () => {
     window.scrollTo(0, 0);
   };
@@ -63,13 +66,14 @@ export default function Footer({ onOpenQuestionModal }) {
                   </p>
                 </div>
                 <div className={styles.footer__link_bot}>
-                  <button
-                    type="button"
+                  <a
+                    href={QUESTION_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={styles.footer__button}
-                    onClick={onOpenQuestionModal}
                   >
                     Задать вопрос
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>

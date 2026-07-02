@@ -2,13 +2,13 @@
 .speed__string {
   background-color: #ff0f43;
   border-radius: 0 0 30px 30px;
-  margin-top: -50px;
-  height: 60px;
+  margin-top: -28px;
+  height: 90px;
   overflow: hidden;
   display: flex;
   align-items: center;
   position: relative;
-  z-index: 30;
+  z-index: 9;
   isolation: isolate;
 }
 
@@ -19,7 +19,8 @@
   color: #ffffff;
   white-space: nowrap;
   animation: scrollText 15s linear infinite;
-  margin: 0;
+  margin: 10px;
+  padding-top: 20px;
 }
 
 @keyframes scrollText {
@@ -32,5 +33,5 @@
 }
 .gap {
   display: inline-block;
-  width: 200px; /* ← нужный вам отступ */
+  width: 200px;
 }

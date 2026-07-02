@@ -2,6 +2,7 @@ import styles from "./Vebinars.module.css";
 import { button } from "../../expert.js";
 import { card } from "../../expert.js";
 import { asset } from "../../utils/asset.js";
+import { cnWow } from "../../utils/wow.js";
 
 export default function Vabinars() {
   return (
@@ -9,14 +10,20 @@ export default function Vabinars() {
       <div className="container">
         <div className={styles.vebinars}>
           <div className={styles.vebinars__header}>
-            <p className={styles.vebinars__header__title}>
+            <p {...cnWow(styles.vebinars__header__title, "fadeInUp")}>
               Коллекция прошедших вебинаров
             </p>
-            <p className={styles.vebinars__header__text}>
+            <p
+              {...cnWow(styles.vebinars__header__text, "fadeInUp", {
+                delay: "0.1s",
+              })}
+            >
               Все записи наших вебинаров, подкастов и интервью в одном месте
             </p>
           </div>
-          <div className={styles.inputWrapper}>
+          <div
+            {...cnWow(styles.inputWrapper, "fadeInUp", { delay: "0.15s" })}
+          >
             <div className={styles.input}>
               <svg
                 width="20"
@@ -53,7 +60,9 @@ export default function Vabinars() {
               </svg>
             </button>
           </div>
-          <div className={styles.button__wrapper}>
+          <div
+            {...cnWow(styles.button__wrapper, "fadeIn", { delay: "0.2s" })}
+          >
             {button.map((button, index) => (
               <button key={index} className={styles.button__card}>
                 {button.name}
@@ -67,19 +76,29 @@ export default function Vabinars() {
             </div>
           </div>
         </div>
-        <div className={styles.vebinars__footer}>
-          <p className={styles.vebinars__footer__text}>Личная эффективность</p>
+        <div
+          {...cnWow(styles.vebinars__footer, "fadeInLeft", {
+            delay: "0.1s",
+          })}
+        >
+          <p className={styles.vebinars__footer__text}>
+            Личная эффективность
+          </p>
         </div>
         <div className={styles.cards__grid}>
-          {card.map((item) => (
-            <div key={item.id} className={styles.card}>
+          {card.map((item, index) => (
+            <div
+              key={item.id}
+              {...cnWow(styles.card, "fadeInUp", {
+                delay: `${0.05 + (index % 6) * 0.08}s`,
+              })}
+            >
               <div
                 className={styles.card__image}
                 style={{
                   backgroundImage: `url(${item.img || asset("/image.jpg")})`,
                 }}
               >
-                {/* Кнопка Play - отдельно от overlay */}
                 <button className={styles.play__button}>
                   <svg
                     width="24"

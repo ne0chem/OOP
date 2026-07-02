@@ -2,6 +2,26 @@ import styles from "./About.module.css";
 import SprintSrtring from "../../components/SprintSrtring/SprintSrtring.jsx";
 import Social from "../../components/Social/Social.jsx";
 import { asset } from "../../utils/asset.js";
+import { cnWow } from "../../utils/wow.js";
+
+const audienceCards = [
+  {
+    icon: "/briefcase.svg",
+    title: "Для руководителей",
+    text: "которые ищут новые инструменты управления.",
+  },
+  {
+    icon: "/star.svg",
+    title: "Для специалистов",
+    text: "которые хотят следить за изменениями.",
+  },
+  {
+    icon: "/teacher.svg",
+    title: "Для студентов",
+    text: "которые хотят слышать не только теорию, но и реальные кейсы.",
+  },
+];
+
 export default function About() {
   return (
     <>
@@ -17,13 +37,35 @@ export default function About() {
               />
               <div className={styles.cool__content__top}>
                 <div className={styles.cool__left__top}>
-                  <p className={styles.text__title}>ОТКРЫТОЕ</p>
-                  <p className={styles.text__red}>ОБРАЗОВАТЕЛЬНОЕ</p>
-                  <p className={styles.text__title}>ПРОСТРАНСТВО</p>
+                  <p
+                    {...cnWow(styles.text__title, "fadeInLeft", {
+                      delay: "0.1s",
+                    })}
+                  >
+                    ОТКРЫТОЕ
+                  </p>
+                  <p
+                    {...cnWow(styles.text__red, "fadeInLeft", {
+                      delay: "0.2s",
+                    })}
+                  >
+                    ОБРАЗОВАТЕЛЬНОЕ
+                  </p>
+                  <p
+                    {...cnWow(styles.text__title, "fadeInLeft", {
+                      delay: "0.3s",
+                    })}
+                  >
+                    ПРОСТРАНСТВО
+                  </p>
                 </div>
               </div>
               <div className={styles.cool__content__bot}>
-                <div className={styles.cool__bot__top}>
+                <div
+                  {...cnWow(styles.cool__bot__top, "fadeInUp", {
+                    delay: "0.1s",
+                  })}
+                >
                   <div className={styles.cool__icon__container}>
                     <img
                       className={styles.cool__icon}
@@ -36,7 +78,11 @@ export default function About() {
                     <p className={styles.cool__text__infD}>вебинаров</p>
                   </div>
                 </div>
-                <div className={styles.cool__bot__center}>
+                <div
+                  {...cnWow(styles.cool__bot__center, "fadeInUp", {
+                    delay: "0.2s",
+                  })}
+                >
                   <div>
                     <img
                       className={styles.cool__icon}
@@ -49,10 +95,18 @@ export default function About() {
                     <p className={styles.cool__text__infD}>слушателей</p>
                   </div>
                   <div>
-                    <img className={styles.img__rel} src={asset("/mac.svg")} alt="" />
+                    <img
+                      className={styles.img__rel}
+                      src={asset("/mac.svg")}
+                      alt=""
+                    />
                   </div>
                 </div>
-                <div className={styles.cool__bot__bot}>
+                <div
+                  {...cnWow(styles.cool__bot__bot, "fadeInUp", {
+                    delay: "0.3s",
+                  })}
+                >
                   <div>
                     <img
                       className={styles.cool__icon}
@@ -70,12 +124,19 @@ export default function About() {
           </div>
         </div>
         <SprintSrtring />
+
         <div className={styles.about__container}>
           <div className="container">
             <div className={styles.about__top}>
-              <p className={styles.about__title}>История создания </p>
+              <p {...cnWow(styles.about__title, "fadeInUp")}>
+                История создания{" "}
+              </p>
               <div className={styles.top_dop}>
-                <div className={styles.about__top_left}>
+                <div
+                  {...cnWow(styles.about__top_left, "fadeInLeft", {
+                    delay: "0.1s",
+                  })}
+                >
                   <div className={styles.about__imgLT}>
                     <img
                       className={styles.about__imgL2}
@@ -98,7 +159,11 @@ export default function About() {
                     </p>
                   </div>
                 </div>
-                <div className={styles.about__top_right}>
+                <div
+                  {...cnWow(styles.about__top_right, "fadeInRight", {
+                    delay: "0.15s",
+                  })}
+                >
                   <div className={styles.about__top_RL}>
                     <div className={styles.about__textRTT}>
                       <p className={styles.about__textRT}>
@@ -143,11 +208,11 @@ export default function About() {
 
                       <div className={styles.about__top_TXT}>
                         <p className={styles.about__TXT}>
-                          Мы стали приглашать экспертов из разных областей
-                          знания, чтобы поговорить с ними в прямом эфире. Именно
+                          Мы стали приглашать экспертов из разных областей
+                          знания, чтобы поговорить с ними в прямом эфире. Именно
                           такой формат позволял всем желающим легко
-                          присоединиться к беседе и задать вопрос эксперту
-                          из любой точки мира.
+                          присоединиться к беседе и задать вопрос эксперту из
+                          любой точки мира.
                         </p>
                       </div>
                     </div>
@@ -155,7 +220,11 @@ export default function About() {
                 </div>
               </div>
               <div className={styles.pricip__container}>
-                <div className={styles.about__bot}>
+                <div
+                  {...cnWow(styles.about__bot, "fadeInUp", {
+                    delay: "0.1s",
+                  })}
+                >
                   <div className={styles.about__bot_left}>
                     <p className={styles.about__bot_left_title}>ООП сейчас</p>
                     <p className={styles.about__bot_left_subtitle}>
@@ -170,7 +239,11 @@ export default function About() {
                       знаниями и опытом.
                     </p>
                   </div>
-                  <div className={styles.about__bot_right}>
+                  <div
+                    {...cnWow(styles.about__bot_right, "fadeInRight", {
+                      delay: "0.2s",
+                    })}
+                  >
                     <img
                       className={styles.about__bot_right_bg}
                       src={asset("/Vector.svg")}
@@ -185,58 +258,55 @@ export default function About() {
                     </p>
                   </div>
                 </div>
-                <div className={styles.vera}>
+                <div
+                  {...cnWow(styles.vera, "fadeInUp", { delay: "0.15s" })}
+                >
                   <p className={styles.vera__text}>
-                    Мы верим, что знания — это базовая потребность человека.
-                    Особенно в мире, который меняется быстрее, чем мы успеваем
-                    привыкнуть к новому.
+                    Мы верим, что знания — это базовая потребность человека.
+                    Особенно в мире, который меняется быстрее, чем мы успеваем
+                    привыкнуть к новому.
                   </p>
-                  <p className={styles.vera__text}>
-                    Поэтому все наши выпуски мы делаем бесплатными, чтобы любой
-                    желающий имел доступ к полезной информации.
+                  <p className={styles.vera__text1}>
+                    Поэтому все наши выпуски мы делаем бесплатными, чтобы любой
+                    желающий имел доступ к полезной информации.
                   </p>
                 </div>
               </div>
             </div>
             <div className={styles.bot}>
-              <p className={styles.bot__title}>Для кого этот проект?</p>
-              <p className={styles.bot_subtitle}>
+              <p {...cnWow(styles.bot__title, "fadeInUp")}>
+                Для кого этот проект?
+              </p>
+              <p
+                {...cnWow(styles.bot_subtitle, "fadeInUp", {
+                  delay: "0.1s",
+                })}
+              >
                 Для всех, кто хочет расти и саморазвиваться.
               </p>
               <div className={styles.bot__container}>
-                <div className={styles.bot__conteiner_info}>
-                  <img
-                    className={styles.bot__icon}
-                    src={asset("/briefcase.svg")}
-                    alt=""
-                  />
-                  <p className={styles.text_work}>Для руководителей</p>
-                  <p className={styles.text_work_tezt}>
-                    которые ищут новые инструменты управления.
-                  </p>
-                </div>
+                {audienceCards.map((card, index) => (
+                  <div
+                    key={card.title}
+                    {...cnWow(styles.bot__conteiner_info, "fadeInUp", {
+                      delay: `${0.1 + index * 0.1}s`,
+                    })}
+                  >
+                    <img
+                      className={styles.bot__icon}
+                      src={asset(card.icon)}
+                      alt=""
+                    />
+                    <p className={styles.text_work}>{card.title}</p>
+                    <p className={styles.text_work_tezt}>{card.text}</p>
+                  </div>
+                ))}
 
-                <div className={styles.bot__conteiner_info}>
-                  <img className={styles.bot__icon} src={asset("/star.svg")} alt="" />
-                  <p className={styles.text_work}>Для специалистов</p>
-                  <p className={styles.text_work_tezt}>
-                    которые хотят следить за изменениями.
-                  </p>
-                </div>
-
-                <div className={styles.bot__conteiner_info}>
-                  <img
-                    className={styles.bot__icon}
-                    src={asset("/teacher.svg")}
-                    alt=""
-                  />
-                  <p className={styles.text_work}>Для студентов</p>
-                  <p className={styles.text_work_tezt}>
-                    которые хотят слышать не только теорию, но и реальные кейсы.
-                  </p>
-                </div>
-
-                <div className={styles.bot__conteiner_last}>
+                <div
+                  {...cnWow(styles.bot__conteiner_last, "zoomIn", {
+                    delay: "0.4s",
+                  })}
+                >
                   <p className={styles.text_last}>
                     И просто для всех любознательных.
                   </p>

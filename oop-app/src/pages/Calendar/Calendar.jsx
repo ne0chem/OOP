@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import styles from "./Calendar.module.css";
 import { asset } from "../../utils/asset.js";
+import { cnWow } from "../../utils/wow.js";
 
 const WEEK_DAYS = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"];
 
@@ -156,14 +157,24 @@ export default function Calendar() {
     <div className={styles.calendar__container}>
       <div className="container">
         <div className={styles.calendar__head}>
-          <p className={styles.calendar__title}>Календарь вебинаров</p>
-          <p className={styles.calendar__subtitle}>
+          <p {...cnWow(styles.calendar__title, "fadeInUp")}>
+            Календарь вебинаров
+          </p>
+          <p
+            {...cnWow(styles.calendar__subtitle, "fadeInUp", {
+              delay: "0.1s",
+            })}
+          >
             Выберите дату, чтобы увидеть запланированные мероприятия
           </p>
         </div>
 
         <div className={styles.calendar__content}>
-          <section className={styles.calendar__left}>
+          <section
+            {...cnWow(styles.calendar__left, "fadeInLeft", {
+              delay: "0.15s",
+            })}
+          >
             <div className={styles.calendar__header}>
               <button
                 type="button"
@@ -221,7 +232,11 @@ export default function Calendar() {
             </div>
           </section>
 
-          <aside className={styles.event__side}>
+          <aside
+            {...cnWow(styles.event__side, "fadeInRight", {
+              delay: "0.2s",
+            })}
+          >
             <h2 className={styles.event__title}>Ближайшие мероприятия</h2>
 
             {selectedEvent ? (
